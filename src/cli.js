@@ -1,0 +1,28 @@
+import meow from 'meow'
+import readPkg from 'read-pkg'
+
+import {updateCordovaPluginVersion} from '.'
+
+const cli = meow(`
+Usage
+
+  $ sync-package-version
+
+Options
+
+  --cordova-plugin           Update version in plugin.xml
+
+Examples
+
+  $ sync-package-version --cordova-plugin
+`, {
+  boolean: [
+    'cordova-plugin',
+  ],
+})
+
+const pkgVersion = readPkg.sync().version
+
+if (cli.flags.cordovaPlugin) {
+  updateCordovaPluginVersion('plugin.xml', pkgVersion)
+}
