@@ -12,8 +12,8 @@ export function updateCordovaPluginVersion(filename, version) {
         return reject(new Error(`cannot find version property in ${filename}`))
       }
       if (match[1] === version) {
-        console.log(`${filename}\t${match[1]}`)
         return resolve({
+          filename,
           before: match[1],
           after: version,
         })
@@ -23,8 +23,8 @@ export function updateCordovaPluginVersion(filename, version) {
         if (err) {
           return reject(err)
         }
-        console.log(`${filename}\t${match[1]} -> ${version}`)
         return resolve({
+          filename,
           before: match[1],
           after: version,
         })

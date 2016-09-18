@@ -24,5 +24,11 @@ Examples
 const pkgVersion = readPkg.sync().version
 
 if (cli.flags.cordovaPlugin) {
-  updateCordovaPluginVersion('plugin.xml', pkgVersion)
+  updateCordovaPluginVersion('plugin.xml', pkgVersion).then(({filename, before, after}) => {
+    if (before === after) {
+      console.log(`${filename}\t${after}`)
+    } else {
+      console.log(`${filename}\t${before} -> ${after}`)
+    }
+  })
 }
