@@ -19,7 +19,7 @@ export function updateCordovaPluginVersion(filename, version) {
         })
       }
       data = data.substring(0, match.index + match[0].length - match[1].length) + version + data.substring(match.index + match[0].length)
-      fs.writeFile(filename, data, 'utf8', (err) => {
+      fs.writeFile(filename, data, 'utf8', err => {
         if (err) {
           return reject(err)
         }

@@ -1,6 +1,6 @@
 # sync-package-version
 
-Sync version number from package.json
+Sync version number from `package.json`
 
 ## Installation
 
@@ -14,6 +14,6 @@ Use with `package.json` script:
 
 ```json
 "scripts": {
-  "postversion": "sync-package-version --cordova-plugin"
+  "version": "sync-package-version --cordova-plugin && git add plugin.xml"
 }
 ```
