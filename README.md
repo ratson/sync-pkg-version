@@ -14,6 +14,6 @@ Use with `package.json` script:
 
 ```json
 "scripts": {
-  "version": "sync-package-version --cordova-plugin && git add plugin.xml"
+  "version": "sync-package-version --cordova-plugin"
 }
 ```

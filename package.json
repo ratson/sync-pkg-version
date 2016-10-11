@@ -12,6 +12,7 @@
     "test": "ava"
   },
   "dependencies": {
+    "execa": "^0.5.0",
     "meow": "^3.7.0",
     "read-pkg": "^2.0.0"
   },

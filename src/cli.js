@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import execa from 'execa'
 import meow from 'meow'
 import readPkg from 'read-pkg'
 
@@ -30,6 +31,8 @@ if (cli.flags.cordovaPlugin) {
       console.log(`${filename}\t${after}`)
     } else {
       console.log(`${filename}\t${before} -> ${after}`)
+      return execa('git', ['add', filename])
     }
+    return null
   })
 }
