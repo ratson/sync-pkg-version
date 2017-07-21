@@ -1,0 +1,4 @@
+extends:
+  - concise-esnext
+rules:
+  promise/always-return: off
