@@ -1,2 +1,4 @@
 extends:
   - concise
+rules:
+  no-mixed-operators: off
