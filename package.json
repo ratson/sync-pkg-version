@@ -5,11 +5,7 @@
   "bin": "lib/cli.js",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "clean": "rimraf lib dist coverage",
     "lint": "eslint --ext js,md .",
-    "prepublish": "npm-run-all clean build",
-    "pretest": "npm run build",
     "test": "ava",
     "posttest": "npm run lint"
   },
@@ -20,23 +16,20 @@
   },
   "devDependencies": {
     "ava": "^0.21.0",
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
     "eslint": "^4.2.0",
     "eslint-config-concise": "^0.9.1",
     "eslint-config-concise-esnext": "^0.8.0",
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1",
     "temp-write": "^3.3.0"
+  },
+  "engines": {
+    "node": ">= 6"
   },
   "repository": "ratson/sync-package-version",
   "license": "MIT",
   "files": [
     "*.md",
     "LICENSE",
-    "lib",
-    "src"
+    "lib"
   ]
 }

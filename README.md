@@ -13,7 +13,9 @@ npm install sync-package-version --save-dev
 Use with `package.json` script:
 
 ```json
-"scripts": {
-  "version": "sync-package-version --cordova-plugin"
+{
+  "scripts": {
+    "version": "sync-package-version --cordova-plugin"
+  }
 }
 ```
