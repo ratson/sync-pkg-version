@@ -1,4 +1,3 @@
 extends:
   - concise
-rules:
-  no-mixed-operators: off
+  - concise-jest
