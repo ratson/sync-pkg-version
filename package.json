@@ -1,6 +1,6 @@
 {
   "name": "sync-package-version",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Sync version number from package.json",
   "bin": {
     "sync-package-version": "lib/cli.js",
