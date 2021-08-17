@@ -12,3 +12,11 @@ test('updateCordovaPluginVersion', async () => {
   expect(before).toBe('0.0.0')
   expect(after).toBe('0.0.1')
 })
+
+test('tab', async () => {
+  const pluginXml = path.join(__dirname, 'fixtures/plugin-tab.xml')
+  const filename = await tempWrite(await fse.readFile(pluginXml, 'utf8'))
+  const { before, after } = await updateCordovaPluginVersion(filename, '0.0.1')
+  expect(before).toBe('0.0.0')
+  expect(after).toBe('0.0.1')
+})
