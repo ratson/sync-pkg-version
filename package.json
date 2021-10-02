@@ -1,10 +1,9 @@
 {
-  "name": "sync-package-version",
+  "name": "sync-pkg-version",
   "version": "0.1.1",
   "description": "Sync version number from package.json",
   "type": "module",
   "bin": {
-    "sync-package-version": "lib/cli.js",
     "sync-pkg-version": "lib/cli.js"
   },
   "main": "lib/index.js",
@@ -30,7 +29,7 @@
   "engines": {
     "node": ">= 12"
   },
-  "repository": "ratson/sync-package-version",
+  "repository": "ratson/sync-pkg-version",
   "license": "MIT",
   "files": [
     "*.md",

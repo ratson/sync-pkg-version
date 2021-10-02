@@ -1,11 +1,11 @@
-# sync-package-version
+# sync-pkg-version
 
 Sync version number from `package.json`
 
 ## Installation
 
 ```
-npm install sync-package-version --save-dev
+npm install sync-pkg-version --save-dev
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ Use with `package.json` script:
 ```json
 {
   "scripts": {
-    "version": "sync-package-version --cordova-plugin"
+    "version": "sync-pkg-version --cordova-plugin"
   }
 }
 ```
