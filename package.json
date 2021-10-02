@@ -2,6 +2,7 @@
   "name": "sync-package-version",
   "version": "0.1.1",
   "description": "Sync version number from package.json",
+  "type": "module",
   "bin": {
     "sync-package-version": "lib/cli.js",
     "sync-pkg-version": "lib/cli.js"
@@ -9,7 +10,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint --ext js,md .",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "posttest": "npm run lint"
   },
   "dependencies": {

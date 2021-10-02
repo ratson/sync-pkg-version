@@ -1,12 +1,13 @@
-'use strict'
+import fse from 'fs-extra'
+import tempWrite from 'temp-write'
+import { dirname, join } from 'path'
+import { updateCordovaPluginVersion } from '..'
+import { fileURLToPath } from 'url'
 
-const fse = require('fs-extra')
-const tempWrite = require('temp-write')
-const path = require('path')
-const { updateCordovaPluginVersion } = require('..')
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 test('updateCordovaPluginVersion', async () => {
-  const pluginXml = path.join(__dirname, 'fixtures/plugin.xml')
+  const pluginXml = join(__dirname, 'fixtures/plugin.xml')
   const filename = await tempWrite(await fse.readFile(pluginXml, 'utf8'))
   const { before, after } = await updateCordovaPluginVersion(filename, '0.0.1')
   expect(before).toBe('0.0.0')
@@ -14,7 +15,7 @@ test('updateCordovaPluginVersion', async () => {
 })
 
 test('tab', async () => {
-  const pluginXml = path.join(__dirname, 'fixtures/plugin-tab.xml')
+  const pluginXml = join(__dirname, 'fixtures/plugin-tab.xml')
   const filename = await tempWrite(await fse.readFile(pluginXml, 'utf8'))
   const { before, after } = await updateCordovaPluginVersion(filename, '0.0.1')
   expect(before).toBe('0.0.0')
