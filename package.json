@@ -3,28 +3,22 @@
   "version": "0.1.1",
   "description": "Sync version number from package.json",
   "type": "module",
-  "bin": {
-    "sync-pkg-version": "lib/cli.js"
-  },
+  "bin": "lib/cli.js",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint --ext js,md .",
+    "lint": "deno fmt lib test && deno lint lib test",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "posttest": "npm run lint"
   },
   "dependencies": {
     "execa": "^5.1.1",
     "fs-extra": "^10.0.0",
-    "read-pkg": "^5.0.0",
-    "yargs": "^17.0.1"
+    "read-pkg": "^7.0.0",
+    "yargs": "^17.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-config-concise": "^0.40.1",
-    "eslint-config-concise-esnext": "^0.40.1",
-    "eslint-config-concise-jest": "^0.40.1",
-    "jest": "^27.0.5",
-    "temp-write": "^4.0.0"
+    "jest": "^27.3.1",
+    "temp-write": "^5.0.0"
   },
   "engines": {
     "node": ">= 12"
